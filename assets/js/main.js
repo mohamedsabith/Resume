@@ -54,3 +54,26 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 300}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
+$(document).ready(function(){
+    $("#contact-form" ).validate({
+        rules: {
+          name: {
+            required: true,
+            minlength: 4,
+           
+          },
+          mail: {
+            required: true,
+            email: true,
+          },
+          message: {
+            required: true,
+            minlength: 10,
+            maxlength: 100
+          }
+        }
+      });
+  });
+
+
